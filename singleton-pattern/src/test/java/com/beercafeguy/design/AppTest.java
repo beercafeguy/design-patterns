@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
+import com.beercafeguy.design.singleton.BillPughSingleton;
 import com.beercafeguy.design.singleton.Singleton;
 import org.junit.Test;
 
@@ -24,6 +25,13 @@ public class AppTest {
     public void testLazySingleton() {
         Singleton s1=Singleton.getSingleInstance();
         Singleton s2=Singleton.getSingleInstance();
+        assertEquals(s1,s2);
+    }
+
+    @Test
+    public void testBillPughSingleton() {
+        BillPughSingleton s1=BillPughSingleton.getSingleInstance();
+        BillPughSingleton s2=BillPughSingleton.getSingleInstance();
         assertEquals(s1,s2);
     }
 }
